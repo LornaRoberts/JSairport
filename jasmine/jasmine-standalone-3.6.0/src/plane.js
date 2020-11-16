@@ -1,7 +1,16 @@
 class Plane {
   constructor(name){
     this.name = name;
-    this.flying = true;
   }
+
+ flying(){
+   var inAir;
+   if (airport.hanger.indexOf(this) === -1){
+     inAir = true;
+   }else{
+  inAir = false;
+   }
+   return inAir;
+ }
 
 }
