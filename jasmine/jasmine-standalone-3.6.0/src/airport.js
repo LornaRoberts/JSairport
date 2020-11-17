@@ -1,10 +1,20 @@
 'use strict'
 
 class Airport{
- // var hanger = [];
+  constructor() {
+    this._hanger = [];
+  }
 
- planes(){
-   return [];
+  planes() {
+    return this._hanger;
+  }
+
+  clearForLanding(plane) {
+    this._hanger.push(plane)
+  }
+
+  clearForTakeOff() {
+    this._hanger = []
   }
 
 }

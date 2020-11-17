@@ -2,17 +2,32 @@
 
 describe('Airport', function(){
   var airport;
+  var plane;
 
   beforeEach(function(){
     airport = new Airport();
+    plane = jasmine.createSpy('plane')
+    // plane ['land'] ??
   });
 
   it ('has a space for landing', function(){
     expect(airport.planes()).toEqual([]);
   });
+
+  it ('plane now has plane in hangar aka planes()', function(){
+    airport.clearForLanding(plane);
+    expect(airport.planes()).toEqual([plane]);
+  });
+
+  it ('plane takes off, no more plane', function(){
+    airport.clearForLanding(plane);
+    airport.clearForTakeOff(plane);
+    expect(airport.planes()).toEqual([])
+
+  });
+
+
 });
-
-
 
 
 
