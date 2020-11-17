@@ -1,15 +1,10 @@
-class Airport {
-  constructor(name){
-    this.name = name;
-    this.capacity = 10;
-    this.hanger = [];
+'use strict'
+
+class Airport{
+ // var hanger = [];
+
+ planes(){
+   return [];
   }
 
-  land(plane){
-    this.hanger.push(plane);
-  }
-
-  takeOff(plane){
-    this.hanger.pop(plane);
-  }
 }
